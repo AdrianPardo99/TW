@@ -8,16 +8,16 @@
     <div class="card black">
       <div>
         <center> <img src="/projectWeb/img/logo.jpg" alt="Logo ESCOM" class="responsive-image logoEscom"></center>
-        <center><span class="card-title white-text">Login</span> </center>
+        <center><span class="card-title white-text">Capacitaci&oacute;n</span> </center>
       </div>
       <div class="card-action">
         <div class="row">
-          <form class="col s12 l12 m12" action="#" method="post">
+          <form class="col s12 l12 m12 white-text" action="#" method="post">
             <div class="row">
               <div class="input-field col s12 l6 m6">
                 <input value="" id="typeCap" type="text"
                     class="validate white-text" length="90">
-                <label class="active white-text" for="cap">Tipo de Capacitacion</label>
+                <label class="active white-text" for="cap">Tipo de Capacitaci&oacute;n</label>
               </div>
               <div class="input-field col s12 l6 m6">
                 <input value="" id="instituReg" type="text"
@@ -46,7 +46,7 @@
                 <label class="active white-text">Horas</label>
                 <select class="browser-default black-text" name="hours" id="hours">
                   <?php
-                      for ($i=1; $i!=80; $i++){
+                      for ($i=1; $i!=381; $i++){
                         echo "<option value=\"$i\">$i</option>";
                       }
                    ?>
@@ -69,7 +69,9 @@
     </div>
   </div>
 </div>
-
-
-
+<script>
+$(document).ready(function() {
+    $('input#typeCap , input#instituReg , input#state').characterCounter();
+  });
+</script>
 <?php include '../php/footerSession.php';?>
