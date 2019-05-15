@@ -9,6 +9,7 @@
     <link href="/projectWeb/css/all.css" rel="stylesheet">
     <script type = "text/javascript" src = "/projectWeb/js/jquery-3.4.1.min.js"></script>
     <script type = "text/javascript" src="/projectWeb/js/materialize.js"></script>
+    <script type = "text/javascript" src="/projectWeb/js/myJS.js"></script>
     <title>First Page</title>
     <title></title>
   </head>

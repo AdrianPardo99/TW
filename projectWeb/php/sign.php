@@ -2,21 +2,6 @@
   include 'header.php';
   $var = "sing";
   include 'fileNav.php';?>
-  <script>
-      $(document).ready(function(){
-          $('.datepicker').datepicker({
-             format: 'dd/mm/yyyy',
-             minDate: new Date(1930,12,1),
-             maxDate: new Date(2090,11,31),
-              i18n:{
-                  months: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
-                  monthsShort: ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'],
-                  weekdays: ['Domingo','Lunes','Martes','Miercoles','Jueves','Viernes','Sabado'],
-                  weekdaysShort:['Dom','Lun','Mar','Mier','Jue','Vie','Sab'],
-                  weekdaysAbbrev:['D','L','M','M','J','V','S'],
-              }
-          });
-        });
   </script>
   <div class="row">
     <!--s -> Mobile
@@ -34,17 +19,17 @@
           <form class="col s12 l12 m12 white-text" action="#" method="post">
             <div class="input-field col s12 l6 m6">
               <input value="" id="nameU" type="text"
-                  class="validate white-text" length="90">
+                  class="validate white-text" data-length="90">
               <label class="active white-text" for="nameU">Nombre</label>
             </div>
             <div class="input-field col s12 l6 m6">
               <input value="" id="app" type="text"
-                  class="validate white-text" length="90">
+                  class="validate white-text" data-length="90">
               <label class="active white-text" for="app">Apellido Paterno</label>
             </div>
             <div class="input-field col s12 l6 m6">
               <input value="" id="apm" type="text"
-                  class="validate white-text" length="90">
+                  class="validate white-text" data-length="90">
               <label class="active white-text" for="cap">Apellido Materno</label>
             </div>
             <div class="input-field col s12 l6 m6">
@@ -67,7 +52,7 @@
             </div>
             <div class="input-field col s12 l6 m6">
               <input value="" id="puesto" type="text"
-                  class="validate white-text" length="90">
+                  class="validate white-text" data-length="90">
               <label class="active white-text" for="cap">Puesto</label>
             </div>
           </form>

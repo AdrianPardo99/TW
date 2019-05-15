@@ -16,17 +16,17 @@
             <div class="row">
               <div class="input-field col s12 l6 m6">
                 <input value="" id="typeCap" type="text"
-                    class="validate white-text" length="90">
+                    class="validate white-text" data-length="90">
                 <label class="active white-text" for="cap">Tipo de Capacitaci&oacute;n</label>
               </div>
               <div class="input-field col s12 l6 m6">
                 <input value="" id="instituReg" type="text"
-                    class="validate white-text" length="20">
+                    class="validate white-text" data-length="20">
                 <label class="active white-text" for="ins">Instituci&oacute;n</label>
               </div>
               <div class="input-field col s12 l6 m6">
                 <input value="" id="state" type="text"
-                    class="validate white-text" length="20">
+                    class="validate white-text" data-length="20">
                 <label class="active white-text" for="state">Pa&iacute;s</label>
               </div>
               <div class="input-field col s12 l6 m6">

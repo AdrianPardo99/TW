@@ -31,12 +31,12 @@
             <div class="row">
               <div class="input-field col s12 l6 m6">
                 <input value="" id="user" type="text"
-                    class="validate white-text" length="20">
+                    class="validate white-text" data-length="20">
                 <label class="active white-text" for="user">Username</label>
               </div>
               <div class="input-field col s12 l6 m6">
                 <input value="" id="pass" type="password"
-                    class="validate white-text" length="20">
+                    class="validate white-text" data-length="20">
                 <label class="active white-text" for="pass">Password</label>
               </div>
               <div class="col s12 l6 m6">
