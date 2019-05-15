@@ -7,11 +7,12 @@
     <link href="/projectWeb/css/folder/family.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/projectWeb/css/materialize.css">
     <link rel="stylesheet" type="text/css" href="/projectWeb/css/my.css">
-    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="/projectWeb/js/materialize.js"></script>
+    <script type = "text/javascript" src = "/projectWeb/js/jquery-3.4.1.min.js"></script>
+    <script type = "text/javascript" src="/projectWeb/js/materialize.js"></script>
     <title>On Session</title>
   </head>
   <body>
-    <header>
+    <header class="col s12 l12 m12">
 
     </header>
+    <br><br><br>

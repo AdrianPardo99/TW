@@ -14,25 +14,52 @@
     });
   });
 </script>
-<div class="col-xs-12 col-md-12 col-sm-12"><h1><br><br><br><br></h1></div>
-<div id="contenedor" class="row col-xs-12 col-md-12 col-sm-12">
-    <div id="Login">
-        <img id="avatar" src="/projectWeb/img/logo.jpg" alt="Logo escom">
-        <h1>Ingrese</h1>
-        <form class="col-xs-12 col-md-12 col-sm-12" action="" id="formulario" method="post">
-            <!-- username -->
-            <label for="Idusuario">ID-usuario</label>
-            <input type="text" placeholder="Ingrese ID-usuario" name="user" id="user" maxlength="150" class="required">
-            <!-- Contraseña -->
-            <label for="Contraseña">Contraseña</label>
-            <input type="password" placeholder="Ingrese Contraseña" name="password" id="pass" maxlength="150" class="required">
-        </form>
-        <form class="col-xs-12 col-md-12 col-sm-12">
-          <input type="submit" name="button" id="button" value="Ingrese">
-          <a href="#">Olvido su contraseña?</a><br>
-          <a href="#">No tiene una cuenta?</a>
-        </form>
+<div class="row">
+  <!--s -> Mobile
+      l -> Desk
+      m -> Tablet-->
+  <div class="col s12 l2 m12"></div>
+  <div class="col s12 l8 m12">
+    <div class="card black">
+      <div>
+        <center> <img src="/projectWeb/img/logo.jpg" alt="Logo ESCOM" class="responsive-image logoEscom"></center>
+        <center><span class="card-title white-text">Login</span> </center>
+      </div>
+      <div class="card-action">
+        <div class="row">
+          <form class="col s12 l12 m12" action="#" method="post">
+            <div class="row">
+              <div class="input-field col s12 l6 m6">
+                <input value="" id="user" type="text"
+                    class="validate white-text" length="20">
+                <label class="active white-text" for="first_name2">Username</label>
+              </div>
+              <div class="input-field col s12 l6 m6">
+                <input value="" id="pass" type="password"
+                    class="validate white-text" length="20">
+                <label class="active white-text" for="first_name2">Password</label>
+              </div>
+              <div class="col s12 l6 m6">
+                <span onclick="alert('initSession');"><a href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal black-text">Iniciar sesion</a></span>
+              </div>
+            </div>
+          </form>
+          <form class="col col s12 l12 m12" action="#" method="post">
+            <div class="row">
+              <div class="col s12 l6 l6">
+                <span onclick="alert('initResetPassword');">
+                  <a href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal black-text">Olvido su contraseña?</a><br>
+                </span>
+              </div>
+              <div class="col s12 l6 l6">
+                <a href="/projectWeb/php/sign.php"
+                  class="btn-flat light-blue darken-2 waves-effect waves-teal black-text">No tiene una cuenta?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
-<br><br><br><br><br>
 <?php include 'footer.php' ?>

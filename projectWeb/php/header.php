@@ -16,8 +16,8 @@
   </head>
   <body>
     <header>
-      <nav class="row grey lighten-1 col-xs-12 col-md-12 col-sm-12">
-        <div class="col-xs-12 col-md-12 col-sm-12 nav-wrapper">
+      <nav class="row grey lighten-1 col s12 l12 m12">
+        <div class="col s12 l12 m12 nav-wrapper">
           <a href="#" class="brand-logo center">
             <img src="/projectWeb/img/logoEscom.png" class="logoISC">
           </a>
