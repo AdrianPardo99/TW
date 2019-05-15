@@ -29,6 +29,29 @@
                     class="validate white-text" length="20">
                 <label class="active white-text" for="state">Pa&iacute;s</label>
               </div>
+              <div class="input-field col s12 l6 m6">
+                <label class="active white-text">A&ntilde;o</label>
+                <select class="browser-default black-text" name="year" id="year">
+                  <?php
+                      for ($i=1980; $i!=2020; $i++){
+                        echo "<option value=\"$i\">$i</option>";
+                      }
+                   ?>
+                </select>
+              </div>
+              <div class="col s12 l12 m12">
+
+              </div>
+              <div class="input-field col s12 l6 m6">
+                <label class="active white-text">Horas</label>
+                <select class="browser-default black-text" name="hours" id="hours">
+                  <?php
+                      for ($i=1; $i!=80; $i++){
+                        echo "<option value=\"$i\">$i</option>";
+                      }
+                   ?>
+                </select>
+              </div>
             </div>
           </form>
           <form class="col col s12 l12 m12" action="#" method="post">
@@ -46,18 +69,7 @@
     </div>
   </div>
 </div>
-<div class="input-field col s12">
-    <select>
-      <option value="" disabled selected>Choose your option</option>
-      <option value="1">Option 1</option>
-      <option value="2">Option 2</option>
-      <option value="3">Option 3</option>
-    </select>
-    <label>Materialize Select</label>
-</div>
-<script>
-  $(document).ready(function() {
-    $('select').material_select();
-  });
-</script>
+
+
+
 <?php include '../php/footerSession.php';?>

@@ -4,13 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="/projectWeb/css/folder/materialize.min.css">
-    <link href="/projectWeb/css/folder/family.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/projectWeb/css/materialize.css">
     <link rel="stylesheet" type="text/css" href="/projectWeb/css/my.css">
-    <script src = "/projectWeb/js/jquery-3.4.1.min.js"></script>
-    <script href = "/projectWeb/validate/dist/jquery.validate.js"></script>
-    <script src="/projectWeb/js/materialize.js"></script>
+    <link href="/projectWeb/css/all.css" rel="stylesheet">
+    <script type = "text/javascript" src = "/projectWeb/js/jquery-3.4.1.min.js"></script>
+    <script type = "text/javascript" src="/projectWeb/js/materialize.js"></script>
     <title>First Page</title>
     <title></title>
   </head>
@@ -22,5 +20,5 @@
             <img src="/projectWeb/img/logoEscom.png" class="logoISC">
           </a>
           <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
+            <i class="fas fa-bars"></i>
           </a>
