@@ -21,7 +21,8 @@
   <div class="col s12 l2 m12"></div>
   <div class="col s12 l8 m12">
     <div class="card black">
-      <div>
+      <div class="row">
+        <div class="col s12 l12 m12 white-text"><h1></h1></div>
         <center> <img src="/projectWeb/img/logo.jpg" alt="Logo ESCOM" class="responsive-image logoEscom"></center>
         <center><span class="card-title white-text">Login</span> </center>
       </div>
@@ -40,7 +41,7 @@
                 <label class="active white-text" for="pass">Password</label>
               </div>
               <div class="col s12 l6 m6">
-                <span onclick="alert('initSession');"><a href="#" class="btn-flat light-blue darken-2 waves-effect waves-purple black-text">Iniciar sesion</a></span>
+                <span onclick="alert('initSession');"><a href="#" class="btn-flat light-blue darken-2 waves-effect waves-purple white-text">Iniciar sesion</a></span>
               </div>
             </div>
           </form>
@@ -48,12 +49,12 @@
             <div class="row">
               <div class="col s12 l6 l6">
                 <span onclick="alert('initResetPassword');">
-                  <a href="#" class="btn-flat light-blue darken-2 waves-effect waves-purple black-text">Olvido su contraseña?</a><br>
+                  <a href="#" class="btn-flat light-blue darken-2 waves-effect waves-purple white-text">Olvido su contraseña?</a><br>
                 </span>
               </div>
               <div class="col s12 l6 l6">
                 <a href="/projectWeb/php/sign.php"
-                  class="btn-flat light-blue darken-2 waves-effect waves-purple black-text">No tiene una cuenta?</a>
+                  class="btn-flat light-blue darken-2 waves-effect waves-purple white-text">No tiene una cuenta?</a>
               </div>
             </div>
           </form>

@@ -6,9 +6,10 @@
   <div class="col s12 l2 m12"></div>
   <div class="col s12 l8 m12">
     <div class="card black">
-      <div>
+      <div class="row">
+        <div class="col s12 l12 m12 white-text"><h1></h1></div>
         <center> <img src="/projectWeb/img/logo.jpg" alt="Logo ESCOM" class="responsive-image logoEscom"></center>
-        <center><span class="card-title white-text">Logros profesionales
+        <center><span class="card-title white-text col s12 l12 m12">Logros profesionales
             (no acad&eacute;micos) ultimos 5 a&ntilde;os <br>
             Incluir los datos relevantes, tales como: titulo, autor(es), nombre del logro, relevancia, d&oacute;nde se realiz&oacute;, etc.
           </span> </center>
@@ -24,10 +25,10 @@
           <form class="col col s12 l12 m12" action="#" method="post">
             <div class="row">
               <div class="col s12 l6 m6">
-                <span onclick="alert('initSave');"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal black-text">Guardar</a></span>
+                <span onclick="alert('initSave');"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text">Guardar</a></span>
               </div>
               <div class="col s12 l6 l6">
-                <a id="Next" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal black-text">Siguiente</a><br>
+                <a id="Next" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text">Siguiente</a><br>
               </div>
             </div>
           </form>
