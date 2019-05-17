@@ -31,7 +31,7 @@
                   class="validate white-text" data-length="90">
               </div>
               <div class="col s12 l6 m6">
-                <a class="add-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" href="javascript: void(0)" tiitle="Click to add more">Add</a>
+                <a class="add-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" href="javascript: void(0)" tiitle="Click to add more"><i class="fas fa-plus"></i></a>
               </div>
               <div class="col s12 l12 m12">
                 <p></p>
@@ -47,7 +47,7 @@
                       class="validate white-text" data-length="90">
                   </div>
                   <div class="input-field col s12 l6 m6">
-                    <label for="year" class="active white-text">A&ntilde;o</label  >
+                    <label for="year" class="active white-text">A&ntilde;o</label>
                   <input value="" id="year" type="text"
                       class="validate white-text" data-length="90">
                   </div>
@@ -57,7 +57,7 @@
                       class="validate white-text" data-length="90">
                   </div>
                     <div class="col s12 l6 m6">
-                      <a class="remove-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" targetDiv="" data-id="0" href="javascript: void(0)">Remove</a>
+                      <a class="remove-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" targetDiv="" data-id="0" href="javascript: void(0)"><i class="fas fa-ban"></i></a>
                     </div>
                     <div class="col s12 l12 m12">
                       <p></p>
@@ -68,7 +68,7 @@
           <form class="col s12 l12 m12" action="#" method="post">
             <div class="row">
               <div class="col s12 l6 m6">
-                <span onclick="alert('initSave');"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text">Guardar</a></span>
+                <span onclick="alert('initSave');"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text"><i class="far fa-save"></i></a></span>
               </div>
             </div>
           </form>
@@ -108,8 +108,6 @@
             }
         });
     });
-</script>
-<script>
     function initSave(){
       l=document.getElementById('saveReg');
       console.log("Saving data");

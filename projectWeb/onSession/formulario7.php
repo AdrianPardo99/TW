@@ -56,10 +56,10 @@
           <form class="col col s12 l12 m12" action="#" method="post">
             <div class="row">
               <div class="col s12 l6 m6">
-                <span onclick="alert('initSave');"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text">Guardar</a></span>
+                <span onclick="alert('initSave');"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text"><i class="far fa-save"></i></a></span>
               </div>
               <div class="col s12 l6 l6">
-                <a id="Next" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text">Siguiente</a><br>
+                <a id="Next" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text"><i class="fas fa-arrow-right"></i></a><br>
               </div>
             </div>
           </form>
