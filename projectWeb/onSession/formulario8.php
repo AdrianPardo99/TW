@@ -5,18 +5,18 @@
       m -> Tablet-->
   <div class="col s12 l2 m12"></div>
   <div class="col s12 l8 m12">
-    <div class="card black">
+    <div style="border-radius: 20px;" class="card black">
       <div class="row">
         <div class="col s12 l12 m12 white-text"><h1></h1></div>
         <center> <img src="/projectWeb/img/logo.jpg" alt="Logo ESCOM" class="responsive-image logoEscom"></center>
         <center><span class="card-title white-text col s12 l12 m12">Productos acad&eacute;micos relevantes en los &uacute;ltimos cinco (5) a&ntilde;os, relacionados con el PE</span> </center>
       </div>
-      <div class="card-action">
+      <div style="border-radius: 20px;" class="card-action">
         <div class="row">
           <form class="col s12 m12 l12 white-text" action="#" method="post">
             <div id="type_container">
               <div class="input-field col s12 l12 m12">
-                <textarea id="desc" class="materialize-textarea white-text" data-length="200"></textarea>
+                <textarea id="desc" class="materialize-textarea white-text" data-length="200" maxlength="200" required></textarea>
                 <label for="desc" class="white-text">Descripci&oacute;n del producto acad&eacute;mico</label>
               </div>
               <div class="col s12 l12 m12">
@@ -28,7 +28,7 @@
             <div id="type-container" class="hide">
               <div class="type-row" id="">
                 <div class="input-field col s12 l12 m12">
-                  <textarea id="desc" class="materialize-textarea white-text" data-length="200"></textarea>
+                  <textarea id="desc" class="materialize-textarea white-text" data-length="200"  maxlength="200" required></textarea>
                   <label for="desc" class="white-text">Descripci&oacute;n del producto acad&eacute;mico</label>
                 </div>
                 <div class="col s12 l12 m12">

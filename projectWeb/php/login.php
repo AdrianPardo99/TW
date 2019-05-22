@@ -5,12 +5,29 @@
 ?>
 <script>
   $(function(){
-    $("#button").on("click",function() {
-      $("#formulario").validate({
-        rules:{
-          user:{required:true};/*Aqui me quede*/
+    $("#but").click(
+    function() {
+        var user = $("#user").val();
+        var pass = $("#pass").val();
+        var patron = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,20}$/;
+
+        if (user == "" || pass == ""){
+            M.toast({html: 'Todos los Campos deben estar llenos', classes: 'rounded'});
+            return false;
         }
-      });
+        if (user.length > 20 ){
+            M.toast({html: 'El nombre del usuario es muy grande', classes: 'rounded'});
+            return false;
+        }
+        if (pass.length > 20 || pass.length < 8){
+            M.toast({html: 'La contraseña es de una longitud incorrecta', classes: 'rounded'});
+            return false;
+        }
+        if (!patron.test(pass)){
+            M.toast({html: 'La contraseña tiene un formato invalido, debe tener al menos un numero una letra miniscula y mayuscula', classes: 'rounded'});
+            return false;
+        }
+
     });
   });
 </script>
@@ -20,28 +37,28 @@
       m -> Tablet-->
   <div class="col s12 l2 m12"></div>
   <div class="col s12 l8 m12">
-    <div class="card black">
+    <div style="border-radius: 20px;" class="card black">
       <div class="row">
         <div class="col s12 l12 m12 white-text"><h1></h1></div>
         <center> <img src="/projectWeb/img/logo.jpg" alt="Logo ESCOM" class="responsive-image logoEscom"></center>
         <center><span class="card-title white-text">Login</span> </center>
       </div>
-      <div class="card-action">
+      <div style="border-radius: 20px;" class="card-action">
         <div class="row">
-          <form class="col s12 l12 m12 white-text" action="#" method="post">
+          <form class="col s12 l12 m12 white-text"  method="post" >
             <div class="row">
               <div class="input-field col s12 l6 m6">
                 <input value="" id="user" type="text"
-                    class="validate white-text" data-length="20">
+                    class="validate white-text" data-length="20"  maxlength="20" required>
                 <label class="active white-text" for="user">Username</label>
               </div>
               <div class="input-field col s12 l6 m6">
                 <input value="" id="pass" type="password"
-                    class="validate white-text" data-length="20">
+                    class="validate white-text" data-length="20"  maxlength="20" required>
                 <label class="active white-text" for="pass">Password</label>
               </div>
               <div class="col s12 l6 m6">
-                <span onclick="alert('initSession');"><a href="#" class="btn-flat light-blue darken-2 waves-effect waves-purple white-text">Iniciar sesion</a></span>
+                <input type="submit" id="but" style = " font-size:16px; color: 000;" class="btn-flat light-blue darken-2 waves-effect waves-purple white-text" value="Ingrese">
               </div>
             </div>
           </form>

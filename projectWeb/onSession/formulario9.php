@@ -18,17 +18,17 @@
               <div class="input-field col s12 l6 m6">
                 <label for="org" class="active white-text">Organismo</label>
                 <input value="" id="org" type="text"
-                  class="validate white-text" data-length="90">
+                  class="validate white-text" data-length="90" maxlength="90" required>
               </div>
               <div class="input-field col s12 l6 m6">
                 <label for="year" class="active white-text">A&ntilde;o</label  >
               <input value="" id="year" type="text"
-                  class="validate white-text" data-length="90">
+                  class="validate white-text" data-length="90" maxlength="90" required>
               </div>
               <div class="input-field col s12 l6 m6">
                 <label for="experience" class="active white-text">Nivel de experiencia</label>
                 <input value="" id="experience" type="text"
-                  class="validate white-text" data-length="90">
+                  class="validate white-text" data-length="90" maxlength="90" required>
               </div>
               <div class="col s12 l6 m6">
                 <a class="add-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" href="javascript: void(0)" tiitle="Click to add more"><i class="fas fa-plus"></i></a>
@@ -44,17 +44,17 @@
                   <div class="input-field col s12 l6 m6">
                     <label for="org" class="active white-text">Organismo</label>
                     <input value="" id="org" type="text"
-                      class="validate white-text" data-length="90">
+                      class="validate white-text" data-length="90" maxlength="90" required>
                   </div>
                   <div class="input-field col s12 l6 m6">
                     <label for="year" class="active white-text">A&ntilde;o</label>
                   <input value="" id="year" type="text"
-                      class="validate white-text" data-length="90">
+                      class="validate white-text" data-length="90" maxlength="90" required>
                   </div>
                   <div class="input-field col s12 l6 m6">
                     <label for="experience" class="active white-text">Nivel de experiencia</label>
                     <input value="" id="experience" type="text"
-                      class="validate white-text" data-length="90">
+                      class="validate white-text" data-length="90" maxlength="90" required>
                   </div>
                     <div class="col s12 l6 m6">
                       <a class="remove-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" targetDiv="" data-id="0" href="javascript: void(0)"><i class="fas fa-ban"></i></a>
@@ -68,7 +68,7 @@
           <form class="col s12 l12 m12" action="#" method="post">
             <div class="row">
               <div class="col s12 l6 m6">
-                <span onclick="alert('initSave');"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text"><i class="far fa-save"></i></a></span>
+                <span onclick="valid();"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text"><i class="far fa-save"></i></a></span>
               </div>
             </div>
           </form>
@@ -78,6 +78,22 @@
     </div>
   </div>
 <script>
+    function valid(){
+        var org = $("#org").val();
+        var ano = $("#year").val();
+        var exp = $("#experience").val();
+        
+        var Textos = /[A-Za-zÁÉÍÓÚñáéíóúÑ\']+/;
+    
+        if (org == "" || ano == "" || exp == "" ){
+            alert("Todos los campos deben estar llenos");
+            return false;
+        }
+        if (org.length >90 || ano.length >90 || exp.length >90){
+            alert("Cadenas demaciado grandes");
+            return false;
+        }
+    }
     jQuery(document).ready(function () {
       console.log("Aqui")
         var doc = $(document);

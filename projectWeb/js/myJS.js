@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('.datepicker').datepicker({
-       format: 'mm/yyyy',
+       format: 'dd/mm/yyyy',
        minDate: new Date(1930,12,1),
        maxDate: new Date(2090,11,31),
         i18n:{
