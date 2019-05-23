@@ -13,64 +13,42 @@
       </div>
       <div class="card-action">
         <div class="row">
-          <form class="col s12 m12 l12 white-text" action="#" method="post">
-            <div id="type_container">
-              <div class="input-field col s12 l6 m6">
-                <label for="org" class="active white-text">Organismo</label>
-                <input value="" id="org" type="text"
-                  class="validate white-text" data-length="90" maxlength="90" required>
-              </div>
-              <div class="input-field col s12 l6 m6">
-                <label for="year" class="active white-text">A&ntilde;o</label  >
-              <input value="" id="year" type="text"
-                  class="validate white-text" data-length="90" maxlength="90" required>
-              </div>
-              <div class="input-field col s12 l6 m6">
-                <label for="experience" class="active white-text">Nivel de experiencia</label>
-                <input value="" id="experience" type="text"
-                  class="validate white-text" data-length="90" maxlength="90" required>
-              </div>
-              <div class="col s12 l6 m6">
-                <a class="add-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" href="javascript: void(0)" tiitle="Click to add more"><i class="fas fa-plus"></i></a>
-              </div>
-              <div class="col s12 l12 m12">
-                <p></p>
-              </div>
-            </div>
-          </form>
-          <form class="col s12 m12 l12 white-text" action="#" method="post">
-            <div id="type-container" class="hide">
-                <div class="type-row" id="">
+          <div id="fomulario9">
+            <div class="r-group">
+              <form class="col s12 m12 l12 white-text" action="#" method="post">
+                <div id="type_container">
                   <div class="input-field col s12 l6 m6">
                     <label for="org" class="active white-text">Organismo</label>
-                    <input value="" id="org" type="text"
+                    <input value="" id="org" type="text" data-pattern-id="org++"
                       class="validate white-text" data-length="90" maxlength="90" required>
                   </div>
                   <div class="input-field col s12 l6 m6">
-                    <label for="year" class="active white-text">A&ntilde;o</label>
-                  <input value="" id="year" type="text"
+                    <label for="year" class="active white-text">A&ntilde;o</label  >
+                  <input value="" id="year" type="text" data-pattern-id="year++"
                       class="validate white-text" data-length="90" maxlength="90" required>
                   </div>
                   <div class="input-field col s12 l6 m6">
                     <label for="experience" class="active white-text">Nivel de experiencia</label>
-                    <input value="" id="experience" type="text"
+                    <input value="" id="experience" type="text" data-pattern-id="experience++"
                       class="validate white-text" data-length="90" maxlength="90" required>
                   </div>
-                    <div class="col s12 l6 m6">
-                      <a class="remove-type btn-flat light-blue darken-2 waves-effect waves-purple white-text" targetDiv="" data-id="0" href="javascript: void(0)"><i class="fas fa-ban"></i></a>
-                    </div>
-                    <div class="col s12 l12 m12">
-                      <p></p>
-                    </div>
                 </div>
+              </form>
+              <div class="col m10 l10 s9"></div>
+              <div class="col m2 l2 s3">
+                <!-- Add a remove button for the item. If one didn't exist, it would be added to overall group -->
+                <button class="r-btnRemove btn btn-flat light-blue darken-2 waves-effect waves-purple white-text"><i class="fas fa-ban"></i></button>
               </div>
-          </form>
+            </div>
+            <div class="col m10 l10 s9"></div>
+            <div class="col m2 l2 s3">
+              <a class="r-btnAdd btn btn-flat light-blue darken-2 waves-effect waves-purple white-text"><i class="fas fa-plus"></i></a>
+            </div>
+          </div>
           <form class="col s12 l12 m12" action="#" method="post">
-            <div class="row">
               <div class="col s12 l6 m6">
                 <span onclick="valid();"><a id="saveReg" href="#" class="btn-flat light-blue darken-2 waves-effect waves-teal white-text"><i class="far fa-save"></i></a></span>
               </div>
-            </div>
           </form>
           </div>
         </div>
@@ -82,9 +60,7 @@
         var org = $("#org").val();
         var ano = $("#year").val();
         var exp = $("#experience").val();
-        
         var Textos = /[A-Za-zÁÉÍÓÚñáéíóúÑ\']+/;
-    
         if (org == "" || ano == "" || exp == "" ){
             alert("Todos los campos deben estar llenos");
             return false;
@@ -94,35 +70,20 @@
             return false;
         }
     }
-    jQuery(document).ready(function () {
-      console.log("Aqui")
-        var doc = $(document);
-        jQuery('a.add-type').die('click').live('click', function (e) {
-            e.preventDefault();
-            var content = jQuery('#type-container .type-row'),
-                element = null;
-            for (var i = 0; i < 1; i++) {
-                element = content.clone();
-                var type_div = 'teams_' + jQuery.now();
-                element.attr('id', type_div);
-                element.find('.remove-type').attr('targetDiv', type_div);
-                element.appendTo('#type_container');
-            }
-        });
-        jQuery(".remove-type").die('click').live('click', function (e) {
-            var didConfirm = confirm("Are you sure You want to delete");
-            if (didConfirm == true) {
-                var id = jQuery(this).attr('data-id');
-                var targetDiv = jQuery(this).attr('targetDiv');
-                //if (id == 0) {
-                //var trID = jQuery(this).parents("tr").attr('id');
-                jQuery('#' + targetDiv).remove();
-                // }
-                return true;
-            } else {
-                return false;
-            }
-        });
+    $('#fomulario9').repeater({
+      btnAddClass: 'r-btnAdd',
+      btnRemoveClass: 'r-btnRemove',
+      groupClass: 'r-group',
+      minItems: 1,
+      maxItems: 0,
+      startingIndex: 0,
+      showMinItemsOnLoad: true,
+      reindexOnDelete: true,
+      repeatMode: 'append',
+      animation: 'fade',
+      animationSpeed: 400,
+      animationEasing: 'swing',
+      clearValues: true
     });
     function initSave(){
       l=document.getElementById('saveReg');
