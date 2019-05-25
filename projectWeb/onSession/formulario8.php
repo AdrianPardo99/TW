@@ -20,7 +20,7 @@
               <form class="col s12 m12 l12 white-text" action="#" method="post">
                 <div id="type_container">
                   <div class="input-field col s12 l12 m12">
-                    <textarea id="desc" class="materialize-textarea white-text" data-pattern-id="desc++"  data-length="200" maxlength="200" required></textarea>
+                    <textarea id="desc" class="materialize-textarea white-text" data-pattern-id="desc++"  name="desc" data-length="200" maxlength="200" required></textarea>
                     <label for="desc" class="white-text">Descripci&oacute;n del producto acad&eacute;mico</label>
                   </div>
                 </div>

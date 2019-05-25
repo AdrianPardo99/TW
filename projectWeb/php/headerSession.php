@@ -10,6 +10,7 @@
     <link href="/projectWeb/css/all.css" rel="stylesheet">
     <script type = "text/javascript" src="/projectWeb/js/myJS.js"></script>
     <script type = "text/javascript" charset="utf8" src="/projectWeb/js/jquery-1.8.2.min.js"></script>
+    <script type = "text/javascript" charset="utf8" src="/projectWeb/js/jquery.form-repeater.js"></script>
     <title>On Session</title>
   </head>
   <body>
