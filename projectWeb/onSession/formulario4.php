@@ -1,4 +1,10 @@
-<?php include '../php/headerSession.php';?>
+<?php
+    include '../php/headerSession.php';
+    $var = "onsession";
+    include '../php/onsesionfilenav.php';
+    session_start();
+    if($_SESSION["ok"] == 1){
+?>
 <div class="row">
   <!--s -> Mobile
       l -> Desk
@@ -43,7 +49,7 @@
 
 
         if (logr == ""  ){
-            M.toast({html: 'No puede ser vacio', classes: 'rounded'});
+            M.toast({html: 'Todos los campos deben estar llenos', classes: 'rounded'});
             return false;
         }
         if (logr.length >400 ){
@@ -56,4 +62,8 @@
         $('textarea#LogrosPer').characterCounter();
       });
 </script>
-<?php include '../php/footerSession.php';?>
+<?php include '../php/footerSession.php';
+        }else{
+        header("location:../php/login.php");
+    }
+?>

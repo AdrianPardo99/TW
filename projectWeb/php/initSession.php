@@ -1,7 +1,9 @@
 <?php
 session_start();
-$_SESSION["flag"]="12345";
-include 'headerSession.php';?>
+$_SESSION["ok"]=1;
+include 'headerSession.php';
+include 'onsesionfilenav.php';
+?>
 
 
 <?php include 'footerSession.php'; ?>

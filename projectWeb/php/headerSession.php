@@ -10,11 +10,15 @@
     <link href="/projectWeb/css/all.css" rel="stylesheet">
     <script type = "text/javascript" src="/projectWeb/js/myJS.js"></script>
     <script type = "text/javascript" charset="utf8" src="/projectWeb/js/jquery-1.8.2.min.js"></script>
-    <script type = "text/javascript" charset="utf8" src="/projectWeb/js/jquery.form-repeater.js"></script>
     <title>On Session</title>
   </head>
   <body>
     <header class="col s12 l12 m12">
-
-    </header>
-    <br><br><br>
+        <nav class="row grey lighten-1 col s12 l12 m12">
+        <div class="col s12 l12 m12 nav-wrapper">
+          <a href="#" class="brand-logo center">
+            <img src="/projectWeb/img/logoEscom.png" class="logoISC">
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="fas fa-bars"></i>
+          </a>

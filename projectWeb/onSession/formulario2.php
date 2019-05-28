@@ -1,4 +1,8 @@
-<?php include '../php/headerSession.php';?>
+<?php include '../php/headerSession.php';
+$var = "onsession";
+include '../php/onsesionfilenav.php';
+session_start();
+if($_SESSION["ok"] == 1){?>
 <div class="row">
   <!--s -> Mobile
       l -> Desk
@@ -80,4 +84,8 @@ $(document).ready(function() {
     $('input#activity , input#instituReg , input#state').characterCounter();
   });
 </script>
-<?php include '../php/footerSession.php'; ?>
+<?php include '../php/footerSession.php';
+        }else{
+        header("location:../php/login.php");
+    }
+?>
